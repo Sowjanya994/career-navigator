@@ -14,7 +14,8 @@ async function askClaude(prompt, system = "") {
   messages.push({ role: "user", content: prompt });
 
   try {
-    const res = await fetch("http://localhost:3001/api/claude", {
+    //const res = await fetch("http://localhost:3001/api/claude", {
+    const res = await fetch("https://career-navigator-kcxk.onrender.com/api/claude", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
