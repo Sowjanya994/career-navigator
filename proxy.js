@@ -17,7 +17,7 @@ app.post('/api/claude', async (req, res) => {
       method: 'POST', 
       headers: {   
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_GROQ_API_KEY'
+        'Authorization': `Bearer ${process.env.GROQ_API_KEY}`
       }, 
       body: JSON.stringify({ 
         model: "llama-3.3-70b-versatile",  
